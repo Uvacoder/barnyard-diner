@@ -55,6 +55,10 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addShortcode('price', function(price) {
+    return `$${price.toFixed(2)}`;
+  });
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
@@ -64,3 +68,4 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 };
+

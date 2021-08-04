@@ -1,0 +1,55 @@
+---
+menus:
+  - name: Breakfast
+    categories:
+      - name: Eggs
+        description: All egg breakfasts come with coffee and your choice of brown or white toast.
+        notes: 
+          - note: Eggs can be scrambled, fried, poached or boiled.
+        meals: 
+          - name: Small Two Egg Breakfast
+            desc: 2 eggs in any style.
+            price: 6
+          - name: Large Two Egg Breakfast
+            desc: 2 eggs in any style and one choice of bacon, ham or sausage.
+            price: 10
+          - name: Hungry Ma
+            desc: 2 eggs, 2 choices of bacon, ham or sausage. Served with homefries.
+            price: 12.5
+          - name: Hungry Pa
+            desc: 3 eggs, 3 choices of bacon, ham or sausage. Served with homefries.
+            price: 14.5
+          - name: Omelette
+            desc: 2 eggs, cheese, and your choice of bacon, ham, sausage or mushrooms.
+            price: 10.00
+      - name: Pancakes and Waffles
+        description: All pancakes and waffles come with syrup
+        meals:
+          - name: 4 Pancakes
+            price: 9.5
+          - name: Pancakes and Fruit
+            price: 12.5
+            desc: 3 pancakes, fresh fruit and whipped cream.
+          - name: 3 Waffles
+            price: 9.5
+            desc: Served with homefries
+          - name: Waffles and Fruit
+            price: 12.5
+            desc: 3 waffles, fresh fruit and whipped cream.
+      - name: Stir Fries
+        description: All stir fry breakfasts come with coffee and your choice of brown or white toast.
+        meals:
+          - name: Breakfast Stir Fry
+            desc: 2 scrambled eggs, 3 meats, onions and sweet peppers. Served with home fries.
+            price: 12.5
+          - name: Veggie Stir Fry
+            desc: 2 scrambled eggs, onions and sweet peppers. Served with home fries.
+            price: 10.5
+  - name: Dinner
+    categories: 
+      - name: Entrees
+        description: Served with choice of potatoes or vegetables
+        meals: 
+          - name: Chicken
+            desc: Hot chicken, fresh in layers of bread and buns
+            price: 11

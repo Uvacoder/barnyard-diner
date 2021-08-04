@@ -1,0 +1,61 @@
+{% if menuitems.menus %}
+{% for menu in menuitems.menus %}
+<section>
+    <h1>{{menu.name}}</h1>
+
+    {% for category in menu.categories %}
+        <h2>{{category.name}}</h2>
+
+        {% if category.description %}
+            <p>{{category.description}}</p>
+        {% endif %}
+
+        {% if category.notes %}
+            {% for note in category.notes %}
+                <p>{{note.note}}</p>
+            {% endfor %}
+        {% endif %}
+        <section class="meals">
+            {% for meal in category.meals %}
+                <div class="meal"><h3>{{meal.name}}</h3><div>{% price meal.price %}</div>
+                {% if meal.desc %}
+                    <p>{{meal.desc}}</p>
+                {% endif %}
+                </div>
+            {% endfor %}
+        </section>
+    {% endfor %}
+</section>
+{% endfor %}
+{% endif %}
+
+<style>
+    p, h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+
+    .meals {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(50ch, 3fr));
+    }
+
+    .meal {
+        padding: 1rem;
+        border: solid 1px currentColor;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto 1fr;
+    }
+
+    .meal p {
+        margin-top: 1rem;
+        grid-column: 1 / 3;
+    }
+
+    @media print {
+        .meal {
+            border: 0;
+        }
+    }
+</style>
