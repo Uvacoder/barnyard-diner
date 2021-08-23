@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="/static/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
       {{title}}
@@ -12,9 +13,23 @@
     {% endif %}
   </head>
   <body>
-
+    <header>
+      <img class="logo" srcset="/static/img/logo_square.svg 480w,
+                  /static/img/logo_rect.svg 800w"
+            sizes="(max-width: 600px) 480px,
+                    800px"
+            src="/static/img/logo_rect.svg"
+            alt="Barnyard Diner">
+    </header>
+    
+    <main>
     {{ content | safe }}
-
-
+    </main>
+    
+    <footer>
+      <img class="img_barn" src="/static/img/barn.svg" />
+      <div class="img_hill"></div>
+      <img class="img_animals" src="/static/img/animals.svg" />
+    </footer>
   </body>
 </html>
